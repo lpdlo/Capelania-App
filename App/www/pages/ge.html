@@ -1,0 +1,79 @@
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span></span>
+          </a>
+        </div>
+        <div class="title">{{titulo}}</div>
+      </div>
+    </div>
+
+    <div class="" id="bl">
+
+      <div class="card demo-card-header-pic">
+        <div style="background-image:url(./img/grups/ge.jpeg)" class="card-header align-items-flex-end">GE: Fé Cristã</div>
+        <div class="card-content card-content-padding">
+          <p>GE: Fé Cristã</p>
+          <div>
+            <p>Local</p>
+            <p>Datas</p>
+          </div>
+          <p>Quisque eget vestibulum nulla. Quisque quis dui Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            excepturi beatae in perferendis at dicta. Veniam debitis velit blanditiis illum distinctio eaque nemo rerum.
+            Maxime non quidem ab? Vero, fugiat. quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="link">FACEBOOK</a>
+          <a href="#" class="link">Whatsapp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</template>
+<style>
+  #p {
+    font-size: 15px;
+  }
+
+  .card-content-padding div p {
+    color: rgba(138, 138, 138, 0.541);
+
+  }
+
+  .demo-card-header-pic .card-header {
+    padding: 0;
+    margin-top: 23vw;
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .demo-card-header-pic .card-content-padding .date {
+    color: #8e8e93;
+  }
+</style>
+<script>
+  return {
+    methods: {
+      confirmaSair: function () {
+        var $ = this.$;
+        var app = this.$app;
+        var router = this.$router;
+        app.dialog.confirm('Tem certesa que deseja sair?', function () {
+          app.dialog.alert('Até logo!');
+          // TODO: User Logout
+          app.popover.close('.popover-links');
+          router.navigate('/index/');
+        });
+      }
+    }
+  }
+</script>

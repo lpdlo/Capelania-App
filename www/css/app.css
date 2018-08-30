@@ -1,4 +1,5 @@
 .dt {
+    overflow-y: hidden;
     background: url("../img/INDEX/bg.png");
     background-size: 100%;
     height: 100vh; /* You must set a specified height */
@@ -8,7 +9,7 @@
   }
 
   .demo {
-    margin-top: 55vh;
+    margin-top: 50vh;
     width:30vw; 
     height:30vw;
   }
@@ -24,6 +25,3 @@
   }
 
 
-#app{
-    overflow: hidden;
-}

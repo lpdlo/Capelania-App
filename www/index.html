@@ -40,7 +40,7 @@
           -->
           <div class="block-strong">
               <p class="text-align-center">
-                <img data-src="img/INDEX/capelania_txtbranco.svg" class="lazy lazy-fade-in demo-lazy demo"/>
+                <img src="img/INDEX/capelania_txtbranco.svg" class="image lazy lazy-fade-in demo-lazy demo"/>
               </p>
           </div>
           </div>
@@ -50,5 +50,10 @@
       <script src="js/framework7.min.js"></script>
       <script src="js/app.js"></script>
 </body>
-
+<script>
+function trocarDeTela(){
+  app.router.navigate('/menu/');
+}
+setTimeout(trocarDeTela, 2000);
+</script>
 </html>

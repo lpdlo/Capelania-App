@@ -1,29 +1,49 @@
 <template>
   <div class="page no-swipeback">
-    
+
 
     <div class="navbar">
-        <div class="navbar-inner sliding nav">
-          <div class="title" style="color:#fff;">Grupos</div>
-        </div>
+      <div class="navbar-inner sliding nav">
+        <div class="title" style="color:#fff;">Grupos</div>
       </div>
+    </div>
 
-    <div class="page-content">
+    <div class="page-content fg">
 
-        <a href="/abc/"></a>
-        <div class="card demo-card-header-pic fg" id="fg" >
-          <div style="background-image:url(./img/grups/abc.jpeg)" class="card-header align-items-flex-end">
+      <a href="/abu/">
+        <div class="card demo-card-header-pic">
+          <div style="background-image:url(./img/grups/dara.jpeg)" class="card-header align-items-flex-end"></div>
+          <div class="card-content card-content-padding cardMenu">
+            <div class="it">
+              <div class="espacoVazio"></div>
+              <div class="imagemCompartilhar"><img src="../img/share.svg" style="height: 12vw;width: 12vw;" alt="compartilhar"></div>
+              <div class="imagemFavorito"><img src="../img/coracao.png" style="height: 12vw;width: 12vw;" alt="favorito"></div>
+            </div>
+
+            <div class="if">
+              <p class="descricaoMenu">Dara é um grupo de apoio cristao com foco em ...</p>
+              <p class="dataMenu">Segunda-feira ás 11:15h na Capela<br> Quinta-feira ás 18hs no Bosque da Arquitetura</p>
+              <p class="grupoMenu">Dara on Arquitetura</p>
+            </div>
           </div>
-          <div class="block " style="padding-right: 0;padding-left: 0; ">
-              <a href="/abu/" class="button">Entrar</a>
-            <!--<p href="/abc/" class="col button button-fill color-white text-color-black">
-              Entrar
-            </p>-->
-          </div>
-        </div>
       </a>
+      <!--
+        
+            
 
-    
+
+      <a href="/abc/">
+      <div class="card demo-card-header-pic fg" id="fg">
+        <div style="background-image:url(./img/grups/abc.jpeg)" class="card-header align-items-flex-end">
+        </div>
+        <div class="block " style="padding-right: 0;padding-left: 0; ">
+          <a href="/abu/" class="button">Entrar</a>
+       </div>
+      </div>
+      </a>
+    -->
+
+
       <div class="block nopad">
         <div class="card demo-card-header-pic">
           <div style="background-image:url(./img/grups/abu.jpeg)" class="card-header align-items-flex-end">
@@ -67,28 +87,28 @@
             <b>POCKETS</b>
           </div>
           <div class="block" style="padding-right: 0;padding-left: 0;">
-            <a href="/pock/" class="button">Entrar</a>
+            <a href="/pock/" class="button">Missoes Universitárias do Dunamis Movement. Reuniões de avivamento e despertamento!</a>
           </div>
         </div>
       </div>
 
-      
-    </div>
-    <div class="popover popover-links">
-      <div class="popover-inner">
-        <div class="list">
-          <ul>
-            <li>
-              <a class="list-button item-link" href="/CuidProfile/" @click="BTNprofile">Meu Perfil</a>
-            </li>
-            <li>
-              <a class="list-button item-link" @click="confirmaSair" href="#">Sair</a>
-            </li>
-          </ul>
+
+      </div>
+      <div class="popover popover-links">
+        <div class="popover-inner">
+          <div class="list">
+            <ul>
+              <li>
+                <a class="list-button item-link" href="/CuidProfile/" @click="BTNprofile">Meu Perfil</a>
+              </li>
+              <li>
+                <a class="list-button item-link" @click="confirmaSair" href="#">Sair</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </template>
 <style>
   .demo-card-header-pic .card-header {

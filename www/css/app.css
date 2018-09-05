@@ -1,3 +1,6 @@
+.fg{
+  margin-top: 2vh;
+}
 .dt {
   overflow-y: hidden;
   background: url("../img/INDEX/bg.png");
@@ -8,15 +11,6 @@
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.demo {
-  margin-top: 50vh;
-  width:30vw; 
-  height:30vw;
-}
-.bot{
-  border: 1px solid #ffffff;
-
-}
 
 .text{
   color:#ffffff; 
@@ -29,13 +23,7 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background */
 }
-.navBotao {
-  background: url("../img/INDEX/bgNv2.png");
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background */
-  transform: scaleX(-1);
-  
-}
+
 
 .image {
   position: absolute;
@@ -61,3 +49,85 @@
   margin-top: -3%;
   
 }
+
+
+
+.descricaoMenu{
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Narrow', sans-serif;    
+}
+
+.cardMenu{
+  margin: 0;
+  height: 300px;
+  flex-direction: column;
+  min-height: 50px;
+  max-height: 200px;
+}
+
+
+.if{
+  width: 90vw;
+  height: 10px;
+}
+.card-header:after {
+
+  background-color: transparent;
+
+}
+
+
+.descricaoMenu{
+  color: #000000;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 5vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.grupoMenu{
+  color: #97989b;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+}
+
+.dataMenu{
+  color: #97989b;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3.5vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.it{
+  display: flex;
+  margin-top: -12%;
+}
+.espacoVazio{
+  height: 7vh;
+  width: 55vw;
+  min-height: 50px;
+}
+.imagemCompartilhar{
+  height: 7vh;
+  width: 7vw;
+  margin-right: 10%;
+}
+.imagemFavorito{
+  height: 7vh;
+  width: 7vw;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+      background-color: lightblue;
+  }
+}
+

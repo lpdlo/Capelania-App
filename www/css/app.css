@@ -1,5 +1,7 @@
 .fg{
   margin-top: 2vh;
+  padding-bottom: 4vh;
+
 }
 .dt {
   overflow-y: hidden;
@@ -47,7 +49,6 @@
 
 .yy{
   margin-top: -3%;
-  
 }
 
 
@@ -58,19 +59,16 @@
   font-family: 'PT Sans Narrow', sans-serif;    
 }
 
-.cardMenu{
-  margin: 0;
-  height: 300px;
+.cardMenu {
+  margin: -3px;
+  height: 119px;
   flex-direction: column;
   min-height: 50px;
-  max-height: 200px;
+  max-height: 150px;
 }
 
 
-.if{
-  width: 90vw;
-  height: 10px;
-}
+
 .card-header:after {
 
   background-color: transparent;
@@ -107,7 +105,7 @@
 
 .it{
   display: flex;
-  margin-top: -12%;
+  margin-top: -10%;
 }
 .espacoVazio{
   height: 7vh;
@@ -125,9 +123,111 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-  body {
-      background-color: lightblue;
+/* max-width  */
+@media screen and (min-height: 568px) and (min-width: 320px) {
+  .it{
+    display: flex;
+    margin-top: -10%;
   }
 }
 
+@media screen and (min-height: 736px) and (min-width: 414px) {
+  .it{
+    margin-top: -10.5%;
+  }
+  .cardMenu {
+    margin: -3px;
+    height: 141px;
+    flex-direction: column;
+    min-height: 50px;
+    max-height: 150px;
+  }
+}
+
+@media screen and (min-height: 812px) and (min-width: 375px) {
+  .it{
+    margin-top: -10.5%;
+  }
+  .cardMenu {
+    height: 131px;
+  }
+}
+
+@media screen and (min-height: 812px) and (min-width: 300px) {
+  .it{
+    margin-top: -10.5%;
+    margin-bottom: 1.5%;
+  }
+  .cardMenu {
+    height: 131px;
+  }
+}
+
+
+@media screen and (min-height: 1024px) and (min-width: 768px) {
+  .md .card-content-padding {
+    padding: 13px;
+}
+  .it{
+    margin-top: -8%;
+    margin-bottom: 2%;
+  }
+  .cardMenu {
+    height: 100vh;
+    max-height: 230px;
+  }
+}
+
+@media screen and (min-height: 1366px) and (min-width: 1366px) {
+  .md .card-content-padding {
+    padding: 46px;
+}
+  .it{
+    margin-top: -11.5%;
+    margin-bottom: 6%;
+  }
+  .cardMenu {
+    height: 100vh;
+    max-height: 250px;
+  }
+}
+
+@media screen and (min-height: 1500px) and (min-width: 800px) {
+  .it{
+    margin-top: -8%;
+    margin-bottom: 2%;
+
+  }
+  .cardMenu {
+    height: 100vh;
+    max-height: 300px;
+
+  }
+}
+
+@media screen and (min-height: 1366px) and (max-width: 600px) {
+  .md .card-content-padding {
+    padding: 20px;
+}
+  .it{
+    margin-top: -9.5%;
+    margin-bottom: -6%;
+  }
+  .cardMenu {
+    height: 100vh;
+    max-height: 180px;
+  }
+}
+
+@media screen and (min-height: 1300px) and (min-width: 1024px) {
+  .it{
+    margin-top: -8%;
+    margin-bottom: 2%;
+
+  }
+  .cardMenu {
+    height: 100vh;
+    max-height: 300px;
+
+  }
+}

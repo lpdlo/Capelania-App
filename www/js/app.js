@@ -1,6 +1,5 @@
 var $ = Dom7;
 
-var DB = new dataBank();
 
 // Init App
 var app = new Framework7({

@@ -1,6 +1,5 @@
 var $ = Dom7;
 
-var DB = new dataBank();
 
 // Init App
 var app = new Framework7({
@@ -32,6 +31,9 @@ var app = new Framework7({
     }, {
       path: '/pock/',
       componentUrl: './pages/pock.html'
+    }, {
+      path: '/add/',
+      url: 'https://www.google.com.br/search?q=teg+para&oq=teg+para+&aqs=chrome..69i57.3428j0j7&sourceid=chrome&ie=UTF-8',
     }
   ]
 });

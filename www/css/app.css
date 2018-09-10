@@ -66,8 +66,20 @@
   min-height: 50px;
   max-height: 150px;
 }
+.md .card {
+  margin-bottom: 4vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
 
+.card{
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
 
+.card-header {
+  border-radius: 10px 10px 0 0;
+}
 
 .card-header:after {
 

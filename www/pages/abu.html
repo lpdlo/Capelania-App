@@ -62,18 +62,6 @@
 </style>
 <script>
   return {
-    methods: {
-      confirmaSair: function () {
-        var $ = this.$;
-        var app = this.$app;
-        var router = this.$router;
-        app.dialog.confirm('Tem certesa que deseja sair?', function () {
-          app.dialog.alert('Até logo!');
-          // TODO: User Logout
-          app.popover.close('.popover-links');
-          router.navigate('/index/');
-        });
-      }
-    }
+    methods: {}
   }
 </script>

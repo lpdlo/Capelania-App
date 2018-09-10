@@ -1,10 +1,19 @@
+
+
+
+
+/*INDEX E MENU*/
+
+
+
+
+
 .fg{
-  margin-top: 2vh;
+  margin-top: 16vw;
   padding-bottom: 4vh;
 
 }
 .dt {
-  overflow-y: hidden;
   background: url("../img/INDEX/bg.png");
   
   height: 100vh; /* You must set a specified height */
@@ -24,6 +33,7 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background */
+  opacity: 0.9;
 }
 
 
@@ -243,3 +253,79 @@
 
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* GRUPO */
+
+#cardMenu{
+  margin: 0;
+}
+
+#headCardMenu{
+  margin-top: 0;
+  height: 50vh;
+  border-radius: 0;
+}
+
+#imageMenu{
+  background-color: white;
+  opacity: 0.7;
+  position: absolute;
+
+}
+
+.md .navbar {
+  background: none;
+}
+
+.black{
+  color: #000000;
+}
+.navMenuImage{
+  margin-top: 1vh;
+  margin-left: 8vw;
+}
+
+
+/*Toolb*/
+.md .navbar~* .page-content, .md .navbar~.page-content {
+ padding-top: 0;
+}
+.md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
+  background: url("../img/INDEX/bgNv.png");
+  color: #fff;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 0.7;
+}
+
+.toolB{
+  margin-top: 90vh;
+}
+
+.md .toolbar {
+  background: #f5000000;
+  color: #0000;
+}
+
+.marButton{
+  overflow: hidden;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  height: 10vh;
+  background-color: white;
+}
+
+/*INFORMACOES DO GRUPO*/
+
+

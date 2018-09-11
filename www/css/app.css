@@ -330,8 +330,23 @@
   height: 10vh;
   background-color: white;
 }
+.md .toolbar {
+  background: transparent;
+}
 
+.md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
+  background-color: transparent;
 
+}
+.md .button {
+  color: transparent;
+}
+.md a {
+  color: transparent;
+}
+.md .toolbar {
+  background: transparent;
+}
 /*INFORMACOES DO GRUPO*/
 
 

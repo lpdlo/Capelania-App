@@ -5,8 +5,10 @@
 /*INDEX E MENU*/
 
 
+#ti{
+  padding-bottom: 7vh;
 
-
+}
 
 .fg{
   margin-top: 16vw;
@@ -265,6 +267,8 @@
 
 /* GRUPO */
 
+
+
 #cardMenu{
   margin: 0;
 }
@@ -293,6 +297,7 @@
   margin-top: 1vh;
   margin-left: 8vw;
 }
+
 
 
 /*Toolb*/
@@ -325,6 +330,7 @@
   height: 10vh;
   background-color: white;
 }
+
 
 /*INFORMACOES DO GRUPO*/
 

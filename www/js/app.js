@@ -6,7 +6,7 @@ var app = new Framework7({
   name: 'App',
   id: 'br.mackenzie.lfs.App',
   root: '#app',
-  theme: 'auto',
+  theme: 'md',
 
 
   routes: [

@@ -73,10 +73,7 @@
 
 .cardMenu {
   margin: -3px;
-  height: 119px;
   flex-direction: column;
-  min-height: 50px;
-  max-height: 150px;
 }
 .md .card {
   margin-bottom: 4vh;
@@ -130,17 +127,21 @@
 .it{
   display: flex;
   margin-top: -10%;
+  margin-bottom: -10%;
 }
+
 .espacoVazio{
   height: 7vh;
   width: 55vw;
   min-height: 50px;
 }
+
 .imagemCompartilhar{
   height: 7vh;
   width: 7vw;
   margin-right: 10%;
 }
+
 .imagemFavorito{
   height: 7vh;
   width: 7vw;
@@ -152,38 +153,33 @@
   .it{
     display: flex;
     margin-top: -10%;
+    margin-bottom: -1.5%;
   }
 }
 
 @media screen and (min-height: 736px) and (min-width: 414px) {
   .it{
     margin-top: -10.5%;
+    margin-bottom: -1.5%;
   }
   .cardMenu {
     margin: -3px;
-    height: 141px;
     flex-direction: column;
-    min-height: 50px;
-    max-height: 150px;
+
   }
 }
 
 @media screen and (min-height: 812px) and (min-width: 375px) {
   .it{
     margin-top: -10.5%;
-  }
-  .cardMenu {
-    height: 131px;
+    margin-bottom: -1.5%;
   }
 }
 
 @media screen and (min-height: 812px) and (min-width: 300px) {
   .it{
     margin-top: -10.5%;
-    margin-bottom: 1.5%;
-  }
-  .cardMenu {
-    height: 131px;
+    margin-bottom: -1.5%;
   }
 }
 
@@ -196,10 +192,7 @@
     margin-top: -8%;
     margin-bottom: 2%;
   }
-  .cardMenu {
-    height: 100vh;
-    max-height: 230px;
-  }
+
 }
 
 @media screen and (min-height: 1366px) and (min-width: 1366px) {
@@ -210,21 +203,12 @@
     margin-top: -11.5%;
     margin-bottom: 6%;
   }
-  .cardMenu {
-    height: 100vh;
-    max-height: 250px;
-  }
 }
 
 @media screen and (min-height: 1500px) and (min-width: 800px) {
   .it{
     margin-top: -8%;
     margin-bottom: 2%;
-
-  }
-  .cardMenu {
-    height: 100vh;
-    max-height: 300px;
 
   }
 }
@@ -237,21 +221,12 @@
     margin-top: -9.5%;
     margin-bottom: -6%;
   }
-  .cardMenu {
-    height: 100vh;
-    max-height: 180px;
-  }
 }
 
 @media screen and (min-height: 1300px) and (min-width: 1024px) {
   .it{
     margin-top: -8%;
     margin-bottom: 2%;
-
-  }
-  .cardMenu {
-    height: 100vh;
-    max-height: 300px;
 
   }
 }
@@ -340,6 +315,8 @@
 }
 .md .button {
   color: transparent;
+  line-height: 51px;
+  height: 51px;
 }
 .md a {
   color: transparent;
@@ -347,6 +324,79 @@
 .md .toolbar {
   background: transparent;
 }
-/*INFORMACOES DO GRUPO*/
 
 
+/*Espaço do final do card*/
+.paddingBottonGrupo{
+  padding-bottom: 12vh;
+}
+
+/*DATA*/
+.grupoDataLocalizacao{
+  display: flex;
+  padding: 10px;
+}
+.grupoDataLocalizacao div p{
+  padding-left: 10px;
+}
+.grupoDataLocalizacao div img{
+  margin-top: 10px;
+}
+
+
+/*Divisao*/
+.linhaDivisoraGrupo{
+  color: #97989b;
+  border-width: 0.5px
+  
+}
+
+
+/*Sobre*/
+
+.sobreGrupo{
+  padding: 16px;
+}
+
+/*Localizacao*/
+.localizacaoGrupo{
+  padding: 0 16px 0 16px;
+}
+
+
+/*NAVBAR*/
+
+.md .navbar .right {
+  padding-right: 5vw;
+}
+
+
+
+/*Lideres*/
+.grupoLideres{
+  display: flex;
+  padding: 10px;
+}
+.grupoLideres div p{
+  padding-left: 10px;
+}
+.grupoLideres div img{
+  margin-top: 10px;
+}
+.paragrafosLideres{
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.paragrafosLideres h2{
+  margin-top: 0;
+}
+
+
+/*Footer card Grupo*/
+
+.espacoLinkGrupo{
+  width: 50vw;
+  padding-left: 16px;
+}

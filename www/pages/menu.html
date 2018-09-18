@@ -1,0 +1,141 @@
+<template>
+  <div class="page no-swipeback">
+
+
+    <div class="navbar">
+      <div class="navbar-inner sliding nav">
+        <div class="title" style="color:#fff;">Grupos</div>
+      </div>
+    </div>
+
+    <div class="page-content fg" id="ti">
+
+
+      <a href="/grupo/">
+        <div class="card demo-card-header-pic">
+          <div style="background-image:url(./img/grups/abu.jpg)" class="card-header align-items-flex-end"></div>
+          
+          <div class="card-content card-content-padding cardMenu">
+            
+            <div class="it">
+              <div class="espacoVazio"></div>
+              <a class="imagemCompartilhar" href="/abc/"><img src="./img/share.svg" style="height: 12vw;width: 12vw;" alt="compartilhar"></a>
+              <a class="imagemFavorito" href="/add/"><img src="./img/coracao2.png" style="height: 12vw;width: 12vw;" alt="favorito"></a>
+            </div>
+
+            <div class="if">
+              <p class="descricaoMenu">ALIANÇA BÍBLICA UNIVERSITÁRIA</p>
+              <p class="dataMenu">Segunda-feira ás 11:15h na Capela<br> Quinta-feira ás 18hs no Bosque da Arquitetura</p>
+              <p class="grupoMenu">Breve descrição</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+
+      <a href="/grupo/">
+        <div class="card demo-card-header-pic">
+          <div style="background-image:url(./img/grups/dara.jpeg)" class="card-header align-items-flex-end"></div>
+          <div class="card-content card-content-padding cardMenu">
+            <div class="it">
+              <div class="espacoVazio"></div>
+              <div class="imagemCompartilhar"><img src="./img/share.svg" style="height: 12vw;width: 12vw;" alt="compartilhar"></div>
+              <div class="imagemFavorito"><img src="./img/coracao2.png" style="height: 12vw;width: 12vw;" alt="favorito"></div>
+            </div>
+
+            <div class="if">
+              <p class="descricaoMenu">DARA</p>
+              <p class="dataMenu">Segunda-feira ás 11:15h na Capela<br> Quinta-feira ás 18hs no Bosque da Arquitetura</p>
+              <p class="grupoMenu">Breve descrição</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+
+      <a href="/grupo/">
+        <div class="card demo-card-header-pic">
+          <div style="background-image:url(./img/grups/pock.jpeg)" class="card-header align-items-flex-end"></div>
+          <div class="card-content card-content-padding cardMenu">
+            <div class="it">
+              <div class="espacoVazio"></div>
+              <div class="imagemCompartilhar"><img src="./img/share.svg" style="height: 12vw;width: 12vw;" alt="compartilhar"></div>
+              <div class="imagemFavorito"><img src="./img/coracao2.png" style="height: 12vw;width: 12vw;" alt="favorito"></div>
+            </div>
+
+            <div class="if">
+              <p class="descricaoMenu">DUNAMIS POCKETS</p>
+              <p class="dataMenu">Terça-feira ás 12h:00 no Prédio 6 sala 306<br> Quarta-feira ás 17hs na capela
+              </p>
+              <p class="grupoMenu">Missões Universitárias do Dunamis Movement. Reuniões de avivamento e despertamento!</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="/grupo/">
+        <div class="card demo-card-header-pic">
+          <div style="background-image:url(./img/grups/teo.jpeg)" class="card-header align-items-flex-end"></div>
+          <div class="card-content card-content-padding cardMenu">
+            <div class="it">
+              <div class="espacoVazio"></div>
+              <div class="imagemCompartilhar"><img src="./img/share.svg" style="height: 12vw;width: 12vw;"></div>
+              <div class="imagemFavorito"><img src="./img/coracao2.png" style="height: 12vw;width: 12vw;"></div>
+            </div>
+
+            <div class="if">
+              <p class="descricaoMenu">TEOLOGIA MACKENZIE</p>
+              <p class="dataMenu">Segunda-Feira às 18:15 na capela
+              </p>
+              <p class="grupoMenu">Alunos de teologia do Mackenzie criaram o grupo com o intuito de compartilhar o Evangelho.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+
+
+
+
+
+    </div>
+</template>
+<style>
+  .demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .demo-card-header-pic .centered {
+    padding-left: 42%;
+  }
+</style>
+<script>
+  return {
+    data: function () {
+      return { titulo: 'Menu', nomeDeUsuario: this.$app.data.username }
+    },
+    methods: {
+      confirmaSair: function () {
+        var $ = this.$;
+        var app = this.$app;
+        var router = this.$router;
+        app.dialog.confirm('Tem certesa que deseja sair?', function () {
+          app.dialog.alert('Até logo!');
+          // TODO: User Logout
+          app.popover.close('.popover-links');
+          router.navigate('/index/');
+        });
+      },
+      BTNprofile: function () {
+        app.popover.close('.popover-links');
+      }
+    }
+  }
+</script>

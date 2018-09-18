@@ -1,0 +1,414 @@
+
+
+
+
+/*INDEX E MENU*/
+
+
+#ti{
+  padding-bottom: 7vh;
+
+}
+
+.fg{
+  margin-top: 16vw;
+  padding-bottom: 4vh;
+
+}
+.dt {
+  background: url("../img/INDEX/bg.png");
+  
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+.text{
+  color:#ffffff; 
+  font-size: 13vw;
+  font-family: 'Architects Daughter',cursive;
+}
+.nav{
+  background: url("../img/INDEX/bgNv.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background */
+  opacity: 0.9;
+}
+
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin:-60px 0 0 -60px;
+  animation: spin 3.3s infinite;
+  transform: rotate(30deg);
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#fg{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 5%;
+}
+
+.yy{
+  margin-top: -3%;
+}
+
+
+
+.descricaoMenu{
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Narrow', sans-serif;    
+}
+
+.cardMenu {
+  margin: -3px;
+  flex-direction: column;
+}
+.md .card {
+  margin-bottom: 4vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.card{
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0;
+}
+
+.card-header:after {
+
+  background-color: transparent;
+
+}
+
+
+.descricaoMenu{
+  color: #000000;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 5vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.grupoMenu{
+  color: #97989b;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+}
+
+.dataMenu{
+  color: #97989b;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3.5vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.it{
+  display: flex;
+  margin-top: -10%;
+  margin-bottom: -10%;
+}
+
+.espacoVazio{
+  height: 7vh;
+  width: 55vw;
+  min-height: 50px;
+}
+
+.imagemCompartilhar{
+  height: 7vh;
+  width: 7vw;
+  margin-right: 10%;
+}
+
+.imagemFavorito{
+  height: 7vh;
+  width: 7vw;
+}
+
+
+/* max-width  */
+@media screen and (min-height: 568px) and (min-width: 320px) {
+  .it{
+    display: flex;
+    margin-top: -10%;
+    margin-bottom: -1.5%;
+  }
+}
+
+@media screen and (min-height: 736px) and (min-width: 414px) {
+  .it{
+    margin-top: -10.5%;
+    margin-bottom: -1.5%;
+  }
+  .cardMenu {
+    margin: -3px;
+    flex-direction: column;
+
+  }
+}
+
+@media screen and (min-height: 812px) and (min-width: 375px) {
+  .it{
+    margin-top: -10.5%;
+    margin-bottom: -1.5%;
+  }
+}
+
+@media screen and (min-height: 812px) and (min-width: 300px) {
+  .it{
+    margin-top: -10.5%;
+    margin-bottom: -1.5%;
+  }
+}
+
+
+@media screen and (min-height: 1024px) and (min-width: 768px) {
+  .md .card-content-padding {
+    padding: 13px;
+}
+  .it{
+    margin-top: -8%;
+    margin-bottom: 2%;
+  }
+
+}
+
+@media screen and (min-height: 1366px) and (min-width: 1366px) {
+  .md .card-content-padding {
+    padding: 46px;
+}
+  .it{
+    margin-top: -11.5%;
+    margin-bottom: 6%;
+  }
+}
+
+@media screen and (min-height: 1500px) and (min-width: 800px) {
+  .it{
+    margin-top: -8%;
+    margin-bottom: 2%;
+
+  }
+}
+
+@media screen and (min-height: 1366px) and (max-width: 600px) {
+  .md .card-content-padding {
+    padding: 20px;
+}
+  .it{
+    margin-top: -9.5%;
+    margin-bottom: -6%;
+  }
+}
+
+@media screen and (min-height: 1300px) and (min-width: 1024px) {
+  .it{
+    margin-top: -8%;
+    margin-bottom: 2%;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* GRUPO */
+
+
+
+#cardMenu{
+  margin: 0;
+}
+
+#headCardMenu{
+  margin-top: 0;
+  height: 50vh;
+  border-radius: 0;
+}
+
+#imageMenu{
+  background-color: transparent;
+  opacity: 0.7;
+  position: absolute;
+
+}
+
+.md .navbar {
+  background: none;
+}
+
+.black{
+  color: #000000;
+}
+.navMenuImage{
+  margin-top: 1vh;
+  margin-left: 8vw;
+}
+
+
+
+/*Toolb*/
+.md .navbar~* .page-content, .md .navbar~.page-content {
+ padding-top: 0;
+}
+.md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
+  background: url("../img/INDEX/bgNv.png");
+  color: #fff;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 0.7;
+}
+
+.toolB{
+  margin-top: 90vh;
+}
+
+.md .toolbar {
+  background: #f5000000;
+  color: #0000;
+}
+
+.marButton{
+  overflow: hidden;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  height: 10vh;
+  background-color: white;
+}
+.md .toolbar {
+  background: transparent;
+}
+
+.md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
+  background-color: transparent;
+
+}
+.md .button {
+  color: transparent;
+  line-height: 51px;
+  height: 51px;
+}
+.md a {
+  color: transparent;
+}
+.md .toolbar {
+  background: transparent;
+}
+
+
+/*Espaço do final do card*/
+.paddingBottonGrupo{
+  padding-bottom: 12vh;
+}
+
+/*DATA*/
+.grupoDataLocalizacao{
+  display: flex;
+  padding: 0 0 0 16px;
+}
+.grupoDataLocalizacao div p{
+  padding-left: 10px;
+}
+.grupoDataLocalizacao div img{
+  margin-top: 10px;
+}
+
+
+/*Divisao*/
+.linhaDivisoraGrupo{
+  color: #97989b;
+  border-width: 0.5px
+  
+}
+
+
+/*Sobre*/
+
+.sobreGrupo{
+  padding: 16px;
+}
+
+/*Localizacao*/
+.localizacaoGrupo{
+  padding: 0 16px 0 16px;
+}
+
+
+/*NAVBAR*/
+
+.md .navbar .right {
+  padding-right: 5vw;
+}
+
+
+
+/*Lideres*/
+.grupoLideres{
+  display: flex;
+  padding: 10px;
+}
+.grupoLideres div p{
+  padding-left: 10px;
+}
+.grupoLideres div img{
+  margin-top: 10px;
+}
+.paragrafosLideres{
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.paragrafosLideres h3{
+  margin: 0;
+  padding-left: 10px;
+}
+
+.paragrafosLideres p{
+  margin: 0;
+}
+
+
+/*Footer card Grupo*/
+
+.espacoLinkGrupo{
+  width: 50vw;
+  padding-left: 16px;
+}
+
+
+/*LOCAIS E HORARIOS DATAS*/
+
+.locaisHorariosGrupos{
+  padding: 0 16px 0 16px;
+}

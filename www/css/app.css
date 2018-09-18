@@ -255,7 +255,7 @@
 }
 
 #imageMenu{
-  background-color: white;
+  background-color: transparent;
   opacity: 0.7;
   position: absolute;
 
@@ -334,7 +334,7 @@
 /*DATA*/
 .grupoDataLocalizacao{
   display: flex;
-  padding: 10px;
+  padding: 0 0 0 16px;
 }
 .grupoDataLocalizacao div p{
   padding-left: 10px;
@@ -389,8 +389,13 @@
   padding: 8px;
 }
 
-.paragrafosLideres h2{
-  margin-top: 0;
+.paragrafosLideres h3{
+  margin: 0;
+  padding-left: 10px;
+}
+
+.paragrafosLideres p{
+  margin: 0;
 }
 
 
@@ -399,4 +404,11 @@
 .espacoLinkGrupo{
   width: 50vw;
   padding-left: 16px;
+}
+
+
+/*LOCAIS E HORARIOS DATAS*/
+
+.locaisHorariosGrupos{
+  padding: 0 16px 0 16px;
 }

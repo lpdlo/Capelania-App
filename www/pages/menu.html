@@ -22,7 +22,22 @@
           </div>
         </div>
       </a>
-
+      {{#if grupos}}
+      {{#each grupos}}
+        <a href="/grupo/">
+          <div class="card demo-card-header-pic">
+            <div style="background-image:url(data:image/png;base64,{{imagem}})" class="card-header align-items-flex-end"></div>
+            <div class="card-content card-content-padding cardMenu">
+              <div class="if">
+                <p class="descricaoMenu">{{nome}}</p>
+                <!-- <p class="dataMenu">Segunda-feira ás 11:15h na Capela<br> Quinta-feira ás 18hs no Bosque da Arquitetura</p> -->
+                <p class="grupoMenu">{{sobre}}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      {{/each}}
+      {{/if}}
     </div>
 </template>
 <style>
@@ -40,11 +55,12 @@
 <script>
   return {
     data: function () {
-      return { titulo: 'Menu', nomeDeUsuario: this.$app.data.username, grupos: JS.getAllGroups() }
+      var grupos = JSON.parse(localStorage.getItem('Grupos')) || null
+      return { titulo: 'Menu', nomeDeUsuario: this.$app.data.username, grupos: grupos }
     },
     on: {
       pageInit: function () {
-        
+        // JS.init()
       }
     },
     methods: {

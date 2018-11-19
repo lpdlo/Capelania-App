@@ -26,7 +26,7 @@ Index.prototype.init = () => {
 
 function getAllGroups() {
   try {
-    let url = 'http://localhost:3000/api/grupo'
+    let url = 'http://201.6.243.44:3878/api/grupo'
     fetch(url,
       {
         method: "get",

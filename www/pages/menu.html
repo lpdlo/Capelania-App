@@ -1,11 +1,11 @@
 <template>
-  <div class="page no-swipeback padding-b-10vh">
-  
+  <div class="page no-swipeback">
+
     <div class="page-content ptr-content" style="padding: 10px;">
-    <div class="ptr-preloader">
-    <div class="preloader"></div>
-    <div class="ptr-arrow"></div>
-  </div>
+      <div class="ptr-preloader">
+        <div class="preloader"></div>
+        <div class="ptr-arrow"></div>
+      </div>
       <br>
       <!--Grupo-->
       {{#if grupos}}
@@ -25,7 +25,7 @@
       {{/each}}
       {{/if}}
     </div>
-	</div>
+  </div>
 </template>
 <style>
   .demo-card-header-pic .card-header {
@@ -48,17 +48,16 @@
     on: {
       pageInit: function () {
         // JS.init()
-         // Pull to refresh content
+        // Pull to refresh content
         var ptrContent = $('.ptr-content');
         ptrContent.on('ptr:refresh', function (e) {
-          
-        JS.recarregarGrupos();
-         app.ptr.done();
-      }, 2000);
+          JS.recarregarGrupos();
+          app.ptr.done();
+        }, 2000);
       }
     },
     methods: {
-      
+
     }
   }
 </script>

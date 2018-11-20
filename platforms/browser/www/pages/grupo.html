@@ -10,161 +10,135 @@
       </div>
     </div>
 
-    <div class="page-content paddingBottonGrupo">
+    <div class="page-content paddingBottonGrupo hide-navbar-on-scroll">
       <div class="card demo-card-header-pic" id="cardMenu">
-        <div style="background-image:url(./img/grups/abu.jpg)" class="card-header align-items-flex-end" id="headCardMenu"></div>
+
+        <div style="background-image:url(data:image/png;base64,{{imagem}})" class="card-header align-items-flex-end" id="headCardMenu"></div>
         <div class="card-content card-content-padding">
-          <h1>AQUI VAI UMA FRASE DE EFEITO</h1>
-          <p>Resumo...</p>
-          <p>Quisque eget vestibulum nulla. Quisque quis dui Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            excepturi beatae in perferendis at dicta. Veniam debitis velit blanditiis illum distinctio eaque nemo rerum.
-            Maxime non quidem ab? Vero, fugiat. quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...
-          </p>
+          <p class="descricaoMenu">{{nome}}</p>
+          <p class="grupoMenu">{{sigla}}</p>
+          <p class="grupoMenu">{{sobre}}</p>
         </div>
-
-        <hr class="linhaDivisoraGrupo">
-
-        <!--DATA E HORARIO-->
-        <div class="locaisHorariosGrupos">
-          <h2>
-            Reuniões
-          </h2>
-        </div>
-
-        <!--SUBSTITUIR-->
-        <div>
-          <div class="grupoDataLocalizacao">
-            <div>
-              <img src="./img/grups/calendario.png" height="46px" alt="">
+      
+        <div class="card-content card-content-padding cardMenu ">
+          <div class="if">
+			<div class="card demo-card-header-pic">
+			  <div class="card-content card-content-padding cardMenu">
+				<div class="if">
+					<p class="descricaoMenu">Reuniões</p>
+            		<p class="grupoMenu">Breve descrição</p>
+					
+				{{#each reunioes}}
+				  <div class="grupoDataLocalizacao">
+					<div>
+					  <img src="./img/grups/calendario.png" height="46px" alt="">
+					</div>
+					<div>
+					  <p class="roboto">{{dia}} ás {{horario}} {{local}}
+					  </p>
+					</div>
+				  </div>
+				{{/each}}
+				
+					
+			  </div>
+			</div>				
             </div>
-            <div>
-              <p>DATA AQUI Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div class="grupoDataLocalizacao">
-            <div>
-              <img src="./img/grups/calendario.png" height="46px" alt="">
-            </div>
-            <div>
-              <p>DATA AQUI Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div class="grupoDataLocalizacao">
-            <div>
-              <img src="./img/grups/calendario.png" height="46px" alt="">
-            </div>
-            <div>
-              <p>DATA AQUI Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <!--div class="grupoDataLocalizacao">
-            <div>
-              <img src="./img/grups/localizacao.png" height="46px" alt="">
-            </div>
-            <div>
-              <p>DATA AQUI Lorem ipsum dolor sit amet consectetur adipisicing elit.   
-              </p>
-            </div>
-          </div-->
-
-          <hr class="linhaDivisoraGrupo">
-          <!--SOBRE-->
-          <div class="sobreGrupo">
-            <div>
-              <h2>
-                Sobre
-              </h2>
-            </div>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio excepturi hic suscipit nobis, commodi facere delectus libero
-                nam totam accusamus dolores eaque non quidem consectetur, quia pariatur labore nesciunt quos!
-              </p>
-            </div>
-          </div>
-
-          <hr class="linhaDivisoraGrupo">
-          <!--Localização-->
-          <div class="localizacaoGrupo">
-            <div>
-              <h2>
-                Localização
-              </h2>
-            </div>
-            <div>
-              <p><b>NOME DO LOCAL</b></p>
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d271.85362691883324!2d-46.65279857788317!3d-23.54645923997134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59326aee073b%3A0x9bf3570bcd107214!2sPr%C3%A9dio+11+-+Capela+-+Ed.+Jos%C3%A9+Manuel+Da+Concei%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1537217399390"
-              width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-
-
-          <hr class="linhaDivisoraGrupo">
-          <div class="localizacaoGrupo">
-            <h2>
-              Lideres
-            </h2>
-          </div>
-          <!--REPLICAR Lideres-->
-          <div class="grupoLideres">
-            <div>
-              <img src="./img/grups/pessoal.png" height="46px" alt="">
-            </div>
-            <div class="paragrafosLideres">
-              <h3>NOME DO LIDER</h3>
-              <p>Descricao dele Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div class="grupoLideres">
-            <div>
-              <img src="./img/grups/pessoal.png" height="46px" alt="">
-            </div>
-            <div class="paragrafosLideres">
-              <h3>NOME DO LIDER</h3>
-              <p>Descricao dele Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div class="grupoLideres">
-            <div>
-              <img src="./img/grups/pessoal.png" height="46px" alt="">
-            </div>
-            <div class="paragrafosLideres">
-              <h3>NOME DO LIDER</h3>
-              <p>Descricao dele Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+		 <div class="card demo-card-header-pic">
+          <div class="card-content card-content-padding cardMenu">
+            <div class="if">
+			   <p class="descricaoMenu">Organizadores</p>
+				<p class="grupoMenu">Organizadores</p>
+				{{#if organizador1}}
+				<div class="grupoDataLocalizacao">
+					<div>
+					  <img src="./img/grups/pessoal.png" height="46px" alt="">
+					</div>
+					<div>
+					  <p class="roboto"><b>{{organizador1}}</b> <br> {{contatoOrganizador1}}</p> 
+					</div>
+             	 </div>
+				 {{/if}}
+				 
+				 {{#if organizador2}}
+				 <div class="grupoDataLocalizacao">
+					<div>
+					  <img src="./img/grups/pessoal.png" height="46px" alt="">
+					</div>
+					<div>
+					  <p class="roboto"><b>{{organizador2}}</b> <br> {{contatoOrganizador2}}</p> 
+					</div>
+             	 </div>
+				 {{/if}}
+				 {{#if organizador3}}
+				 <div class="grupoDataLocalizacao">
+					<div>
+					  <img src="./img/grups/pessoal.png" height="46px" alt="">
+					</div>
+					<div>
+					  <p class="roboto"><b>{{organizador3}}</b> <br> {{contatoOrganizador3}}</p>  
+					</div>
+             	 </div>
+				 {{/if}}
+              
             </div>
           </div>
         </div>
-
-        <div class="card-footer">
-          <img src="./img/grups/whatsapp.svg" height="41px" alt="">
-          <img src="./img/grups/facebook.svg" height="41px" alt="">
-          <img src="./img/grups/instagram.svg" height="33px" style="margin-left:6px;" alt="">
+			  
+			  
+           
+			  
+			  
+          </div>
+        
+          <div class="grupoMenu">
+            <p class="grupoMenu">Contato</p>
+			{{#if whatsapp}}
+			<a href="#" onclick="window.open('{{whatsapp}}', '_system');">
+            <img src="./img/grups/whatsapp.svg" height="41px" alt="whatsapp">
+			</a>
+			{{/if}}
+			{{#if facebook}}
+			<a href="#" onclick="window.open('{{facebook}}', '_system');">
+            <img src="./img/grups/facebook.svg" height="41px" alt="facebook"></a>
+            {{/if}}
+			{{#if instagram}}
+			<a href="#" onclick="window.open('{{instagram}}', '_system');">
+			<img src="./img/grups/instagram.svg" height="33px" style="margin-left:6px;margin-bottom: 0.2pc;" alt="instagram">
+			</a>
+			{{/if}}
+          </div>
         </div>
-
       </div>
-
-
-
-
-
-
-
     </div>
-    
-
-
   </div>
-
 </template>
 
 <script>
-  return {
-    methods: {}
+  return { 
+    data: function () {
+		  if(this.$route.query.id){
+			  console.log(this.$route.query.id, "here");
+			  let grupo = JS.getGrupo(this.$route.query.id);
+			  let reunioes = JS.getReunioes(this.$route.query.id);
+			  console.log(grupo);
+			  return {
+				nome: grupo.nome,
+				sigla: grupo.sigla,
+				imagem: grupo.imagem,			
+				organizador1: grupo.organizador1,
+				organizador2: grupo.organizador2,
+				organizador3: grupo.organizador3,
+				contatoOrganizador1: grupo.contatoOrganizador1,			
+				contatoOrganizador2: grupo.contatoOrganizador2,
+				contatoOrganizador3: grupo.contatoOrganizador3,
+				reunioes: reunioes,
+				whatsapp: grupo.whatsapp,
+				facebook: grupo.facebook,
+				instagram: grupo.instagram,
+				
+			  }
+		  }
+	}
   }
 </script>

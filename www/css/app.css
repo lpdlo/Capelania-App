@@ -64,7 +64,7 @@
 .descricaoMenu{
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif,cursive;   
+  font-family: 'Roboto', sans-serif;   
 }
 
 .cardMenu {
@@ -95,7 +95,7 @@
 
 .descricaoMenu{
   color: #000000;
-  font-family: 'Roboto', sans-serif,cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   padding: 0;
   margin: 0;
@@ -103,7 +103,7 @@
 }
 .grupoMenu{
   color: #97989b;
-  font-family: 'Roboto', sans-serif,cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 1em;
   padding: 0;
   margin: 0;
@@ -113,7 +113,7 @@
 
 .dataMenu{
   color: #97989b;
-  font-family: 'Roboto', sans-serif,cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 1em;
   padding: 0;
   margin: 0;
@@ -421,16 +421,16 @@
 
 /*fonts*/
 .roboto{
-  font-family: 'Roboto', sans-serif,cursive;   
+  font-family: 'Roboto', sans-serif;   
 }
 
 .sans{
-  font-family: 'Open Sans', sans-serif,cursive;   
+  font-family: 'Open Sans', sans-serif;   
 }
 
 .demo-card-header-pic .card-header {
 
-    height: 27vh;
+    height: 25vh;
     background-size: cover;
     background-position: center;
     color: #fff;

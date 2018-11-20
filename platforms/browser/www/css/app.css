@@ -4,19 +4,14 @@
 
 /*INDEX E MENU*/
 
-
+/* 
 #ti{
   padding-bottom: 7vh;
 
-}
+} */
 
-.fg{
-  margin-top: 16vw;
-  padding-bottom: 4vh;
-
-}
-.dt {
-  background: url("../img/INDEX/bg.png");
+.backgrond-index {
+  background: url("../img/INDEX/background.jpg");
   
   height: 100vh; /* You must set a specified height */
   background-position: center; /* Center the image */
@@ -25,10 +20,11 @@
 }
 
 
-.text{
+.title-index {
   color:#ffffff; 
-  font-size: 13vw;
-  font-family: 'Architects Daughter',cursive;
+  font-size: 2em;
+  
+  font-family: 'Roboto', sans-serif,cursive;
 }
 .nav{
   background: url("../img/INDEX/bgNv.png");
@@ -68,7 +64,7 @@
 .descricaoMenu{
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans Narrow', sans-serif;    
+  font-family: 'Roboto', sans-serif;   
 }
 
 .cardMenu {
@@ -99,16 +95,16 @@
 
 .descricaoMenu{
   color: #000000;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 5vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 .grupoMenu{
   color: #97989b;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 3vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -117,8 +113,8 @@
 
 .dataMenu{
   color: #97989b;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 3.5vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -251,7 +247,7 @@
 #headCardMenu{
   margin-top: 0;
   height: 50vh;
-  border-radius: 0;
+  border-radius: 0 0 25px 25px;
 }
 
 #imageMenu{
@@ -411,4 +407,32 @@
 
 .locaisHorariosGrupos{
   padding: 0 16px 0 16px;
+}
+
+.padding-b-10vh{
+  padding-bottom: 10vh;
+}
+
+
+/*Alturas*/
+.height-55vh{
+   height: 55vh;
+}
+
+/*fonts*/
+.roboto{
+  font-family: 'Roboto', sans-serif;   
+}
+
+.sans{
+  font-family: 'Open Sans', sans-serif;   
+}
+
+.demo-card-header-pic .card-header {
+
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
 }

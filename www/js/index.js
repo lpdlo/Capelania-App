@@ -5,10 +5,14 @@ function Index() {
 
 //INIT
 Index.prototype.init = () => {
+  if(localStorage.primeiraVez){
+    app.router.navigate('/menu/');
+  } 
   //Get All Grupos
   getAllGroups()
   //Get All Reunioes
   getAllReunioes();
+
 }
 
 //Get grupo
@@ -73,12 +77,6 @@ Index.prototype.recarregarGrupos = () => {
           grupo.imagem = bufferToBase64(grupo.imagem.data)
         })
         localStorage.setItem('Grupos', JSON.stringify(grupos));
-        app.router.navigate('/menu/', {
-          force: true,
-          ignoreCache: true,
-          reload: true
-        });
-
       })
       .catch(err => {
         console.log('Request failure: ', error);
@@ -118,6 +116,7 @@ function getAllGroups() {
 
         localStorage.setItem('Grupos', JSON.stringify(grupos));
         app.router.navigate('/menu/');
+        localStorage.primeiraVez = true
       })
       .catch(err => {
         console.log('Request failure: ', error);

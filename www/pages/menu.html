@@ -15,6 +15,7 @@
       <!--Grupo-->
       {{#if grupos}}
       {{#each grupos}}
+      {{#if imagem}}
       <a href="/grupo/?id={{_id}}" style="padding: 0 10px 0 10px;">
         <div class="card demo-card-header-pic">
           <div style="background-image:url(data:image/png;base64,{{imagem}})" class="card-header align-items-flex-end"></div>
@@ -22,11 +23,12 @@
             <div class="if">
               <p class="descricaoMenu">{{sigla}}</p>
               <!-- <p class="dataMenu">Segunda-feira ás 11:15h na Capela<br> Quinta-feira ás 18hs no Bosque da Arquitetura</p>  -->
-              <p class="dataMenu">{{sobre}}</p>
+              <p class="dataMenu">{{breveDescricao}}</p>
             </div>
           </div>
         </div>
       </a>
+      {{/if}}
       {{/each}}
       {{/if}}
     </div>

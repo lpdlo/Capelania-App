@@ -37,11 +37,13 @@ Index.prototype.getGrupo = (id) => {
 
 //Get Reunioes
 Index.prototype.getReunioes = (id) => {
+  
   try {
     let reunioes = JSON.parse(localStorage.getItem('Reunioes'));
     if (reunioes.length) {
       return reunioes.filter(reuniao => {
-        if (id === reuniao.autor._id) {
+        console.log(id);
+        if (id === reuniao.autor) {
           return true
         }
         return false

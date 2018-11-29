@@ -116,6 +116,8 @@
 				console.log(this.$route.query.id, "here");
 				let grupo = JS.getGrupo(this.$route.query.id);
 				let reunioes = JS.getReunioes(this.$route.query.id);
+				console.log(reunioes);
+				
 				console.log(grupo);
 				return {
 					nome: grupo.nome,

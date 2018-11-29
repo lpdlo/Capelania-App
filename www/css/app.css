@@ -330,7 +330,7 @@
 /*DATA*/
 .grupoDataLocalizacao{
   display: flex;
-  padding: 0 0 0 16px;
+  /* padding: 0 0 0 16px; */
 }
 .grupoDataLocalizacao div p{
   padding-left: 10px;

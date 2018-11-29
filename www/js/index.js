@@ -41,7 +41,6 @@ Index.prototype.getReunioes = (id) => {
     let reunioes = JSON.parse(localStorage.getItem('Reunioes'));
     if (reunioes.length) {
       return reunioes.filter(reuniao => {
-        console.log(id);
         if (id === reuniao.autor) {
           return true
         }
@@ -64,7 +63,6 @@ Index.prototype.recarregarGrupos = () => {
   //Get Grupos
   getAllGroups()
   console.log('Recarregar ');
-  
   //Get Reunioes
 }
 

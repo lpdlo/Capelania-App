@@ -24,7 +24,7 @@
   color:#ffffff; 
   font-size: 2em;
   
-  font-family: 'Roboto', sans-serif,cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 .nav{
   background: url("../img/INDEX/bgNv.png");
@@ -42,8 +42,8 @@
   width: 120px;
   height: 120px;
   margin:-60px 0 0 -60px;
-  animation: spin 3.3s infinite;
-  transform: rotate(30deg);
+  /* animation: spin 3.3s infinite;
+  transform: rotate(30deg); */
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
@@ -72,7 +72,7 @@
   flex-direction: column;
 }
 .md .card {
-  margin-bottom: 4vh;
+  /* margin-bottom: 4vh; */
   margin-left: 3vw;
   margin-right: 3vw;
 }
@@ -252,7 +252,7 @@
 
 #imageMenu{
   background-color: transparent;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   position: absolute;
 
 }
@@ -330,7 +330,7 @@
 /*DATA*/
 .grupoDataLocalizacao{
   display: flex;
-  padding: 0 0 0 16px;
+  /* padding: 0 0 0 16px; */
 }
 .grupoDataLocalizacao div p{
   padding-left: 10px;
@@ -435,4 +435,87 @@
     background-position: center;
     color: #fff;
 
+}
+
+#bar-progress-index{
+  margin-top: 72vh;
+}
+
+.md .progressbar-infinite:after, .md .progressbar-infinite:before {
+  content: '';
+  background: #fff8f7;
+}
+
+.md .progressbar-infinite:after, .md .progressbar-infinite:before {
+  content: '';
+  background: #fff8f7;
+}
+
+.md .progressbar, .md .progressbar-infinite {
+  background: rgba(119, 37, 24, 0.42);
+}
+
+.text-infinit-index{
+  text-align: center;
+  color: #fff;
+}
+
+#title-index{
+  margin-top: 4vh;
+}
+
+.background-menu{
+  height: 9vh;
+  width: 100vw;
+  background-image: url('../img/INDEX/background.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+  align-content: center;
+  border-radius: 0 0 15px 15px;
+  margin-bottom: -19px;
+}
+
+.logo-menu{
+  height: 51px;
+  width: 51px;
+  background-image: url('../img/INDEX/capelania_txtbranco.svg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.text-menu{
+  color: #fff;
+}
+.h1-text-menu{
+  font-size: 3em;
+  margin-bottom: 0;
+  font-family: serif;
+  margin-left: 3vw;
+}
+
+
+.md .navbar {
+  background: transparent;
+  background-image: url("../img/INDEX/background.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 8vh;
+  border-radius: 0 0 15px 15px;
+  opacity: 0.8;
+}
+
+.md .navbar:after {
+  background: none;
+}
+
+.page-content {
+  background-color: rgba(132, 84, 15, 0.09019607843137255);
 }

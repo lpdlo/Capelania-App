@@ -5,10 +5,13 @@ function Index() {
 
 //INIT
 Index.prototype.init = () => {
+  if(localStorage.primeiraVez){
+    app.router.navigate('/menu/');
+  } 
   //Get All Grupos
-  getAllGroups()
+  getAllGroups();
   //Get All Reunioes
-  getAllReunioes();
+
 }
 
 //Get grupo
@@ -33,11 +36,12 @@ Index.prototype.getGrupo = (id) => {
 
 //Get Reunioes
 Index.prototype.getReunioes = (id) => {
+  
   try {
     let reunioes = JSON.parse(localStorage.getItem('Reunioes'));
     if (reunioes.length) {
       return reunioes.filter(reuniao => {
-        if (id === reuniao.autor._id) {
+        if (id === reuniao.autor) {
           return true
         }
         return false
@@ -57,37 +61,8 @@ Index.prototype.getReunioes = (id) => {
 
 Index.prototype.recarregarGrupos = () => {
   //Get Grupos
-  try {
-    let url = 'http://201.6.243.44:3878/api/grupo'
-    fetch(url,
-      {
-        method: "get",
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(res => res.json())
-      .then(grupos => {
-        console.log('aaaa');
-        gurpos = grupos.map(grupo => {
-          grupo.imagem = bufferToBase64(grupo.imagem.data)
-        })
-        localStorage.setItem('Grupos', JSON.stringify(grupos));
-        app.router.navigate('/menu/', {
-          force: true,
-          ignoreCache: true,
-          reload: true
-        });
-
-      })
-      .catch(err => {
-        console.log('Request failure: ', error);
-      })
-  } catch (err) {
-    console.log('err: ' + err);
-
-  }
-  getAllReunioes();
+  getAllGroups()
+  console.log('Recarregar ');
   //Get Reunioes
 }
 
@@ -112,19 +87,21 @@ function getAllGroups() {
       .then(grupos => {
         console.log('HERE');
 
+        getAllReunioes();
         gurpos = grupos.map(grupo => {
-          grupo.imagem = bufferToBase64(grupo.imagem.data)
+          if(grupo.imagem){
+          grupo.imagem = bufferToBase64(grupo.imagem.data)}
         })
-
         localStorage.setItem('Grupos', JSON.stringify(grupos));
         app.router.navigate('/menu/');
+        localStorage.primeiraVez = true
       })
       .catch(err => {
-        console.log('Request failure: ', error);
         let grupos = JSON.parse(localStorage.getItem('Grupos'));
         if (grupos) {
           app.router.navigate('/menu/');
         }
+        console.log('Request failure: ', error);
       })
   } catch (err) {
     console.log('err: ' + err);

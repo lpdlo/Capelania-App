@@ -72,7 +72,7 @@
   flex-direction: column;
 }
 .md .card {
-  margin-bottom: 4vh;
+  /* margin-bottom: 4vh; */
   margin-left: 3vw;
   margin-right: 3vw;
 }
@@ -517,6 +517,5 @@
 }
 
 .page-content {
-
-  background-color: #84540f17;
+  background-color: rgba(132, 84, 15, 0.09019607843137255);
 }

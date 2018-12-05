@@ -1,21 +1,22 @@
 <template>
   <div class="page no-swipeback">
 
-    
-    <div class="page-content ptr-content">
-        <div class="background-menu">
-            <div class="logo-menu">
-            </div>
-          </div>  
+
+    <div class="background-menu navbar" style="opacity: 1;height: 9vh;">
+      <div class="navbar-inner sliding logo-menu" style="position: flex;">
+      </div>
+    </div>
+    <div class="page-content ptr-content hide-navbar-on-scroll">
       <div class="ptr-preloader">
         <div class="preloader"></div>
         <div class="ptr-arrow"></div>
       </div>
       <br>
+      <br>
+      <br>
+      
       <!--Grupo-->
-      {{#if grupos}}
-      {{#each grupos}}
-      {{#if imagem}}
+      {{#if grupos}} {{#each grupos}} {{#if imagem}}
       <a href="/grupo/?id={{_id}}" style="padding: 0 10px 0 10px;">
         <div class="card demo-card-header-pic">
           <div style="background-image:url(data:image/png;base64,{{imagem}})" class="card-header align-items-flex-end"></div>
@@ -28,9 +29,7 @@
           </div>
         </div>
       </a>
-      {{/if}}
-      {{/each}}
-      {{/if}}
+      {{/if}} {{/each}} {{/if}}
     </div>
   </div>
 </template>
@@ -47,6 +46,7 @@
   }
 </style>
 <script>
+  $('.ptr-preloader').hide()
   return {
     data: function () {
       var grupos = JSON.parse(localStorage.getItem('Grupos')) || null

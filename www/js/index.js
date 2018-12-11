@@ -63,6 +63,7 @@ Index.prototype.recarregarGrupos = () => {
   //Get Grupos
   getAllGroups()
   console.log('Recarregar ');
+
   //Get Reunioes
 }
 
@@ -75,7 +76,7 @@ Index.prototype.recarregarGrupos = () => {
 //Get All Grupos
 function getAllGroups() {
   try {
-    let url = 'http://201.6.243.44:3878/api/grupo'
+    let url = 'http://localhost:3000/api/grupo'
     fetch(url,
       {
         method: "get",
@@ -88,20 +89,23 @@ function getAllGroups() {
         console.log('HERE');
 
         getAllReunioes();
+
         gurpos = grupos.map(grupo => {
           if(grupo.imagem){
           grupo.imagem = bufferToBase64(grupo.imagem.data)}
         })
+
         localStorage.setItem('Grupos', JSON.stringify(grupos));
-        app.router.navigate('/menu/');
+        app.router.navigate('/menu/', {reload:true, force:true, ignoreCache:true});
         localStorage.primeiraVez = true
+        app.ptr.done();
       })
       .catch(err => {
         let grupos = JSON.parse(localStorage.getItem('Grupos'));
         if (grupos) {
           app.router.navigate('/menu/');
         }
-        console.log('Request failure: ', error);
+        console.log('Request failure: ', err);
       })
   } catch (err) {
     console.log('err: ' + err);
@@ -112,7 +116,7 @@ function getAllGroups() {
 //Get all Reunioes
 function getAllReunioes() {
   try {
-    let url = 'http://201.6.243.44:3878/api/reuniao'
+    let url = 'http://localhost:3000/api/reuniao'
     fetch(url,
       {
         method: "get",
@@ -126,7 +130,7 @@ function getAllReunioes() {
         localStorage.setItem('Reunioes', JSON.stringify(reunioes));
       })
       .catch(err => {
-        console.log('Request failure: ', error);
+        console.log('Request failure: ', err);
       })
   } catch (err) {
     console.log('err: ' + err);

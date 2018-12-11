@@ -14,7 +14,7 @@
       <br>
       <br>
       <br>
-      
+
       <!--Grupo-->
       {{#if grupos}} {{#each grupos}} {{#if imagem}}
       <a href="/grupo/?id={{_id}}" style="padding: 0 10px 0 10px;">
@@ -57,10 +57,11 @@
         // JS.init()
         // Pull to refresh content
         var ptrContent = $('.ptr-content');
+
         ptrContent.on('ptr:refresh', function (e) {
           JS.recarregarGrupos();
-          app.ptr.done();
-        }, 2000);
+          //app.ptr.done();
+        });
       }
     },
     methods: {

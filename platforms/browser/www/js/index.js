@@ -5,13 +5,11 @@ function Index() {
 
 //INIT
 Index.prototype.init = () => {
-  if(localStorage.primeiraVez){
+  if (localStorage.primeiraVez) {
     app.router.navigate('/menu/');
-  } 
-  //Get All Grupos
-  getAllGroups();
-  //Get All Reunioes
-
+  } else {
+    getAll();
+  }
 }
 
 //Get grupo
@@ -36,7 +34,6 @@ Index.prototype.getGrupo = (id) => {
 
 //Get Reunioes
 Index.prototype.getReunioes = (id) => {
-  
   try {
     let reunioes = JSON.parse(localStorage.getItem('Reunioes'));
     if (reunioes.length) {
@@ -55,28 +52,16 @@ Index.prototype.getReunioes = (id) => {
   }
 }
 
-
-
-//Recarregar Grupos
-
-Index.prototype.recarregarGrupos = () => {
-  //Get Grupos
-  getAllGroups()
-  console.log('Recarregar ');
-
-  //Get Reunioes
+//Recarregar
+Index.prototype.recarregar = (id) => {
+    getAll(true);
 }
 
 
 
-
-
-
-
-//Get All Grupos
-function getAllGroups() {
+function getAll(refresh = false) {
   try {
-    let url = 'http://localhost:3000/api/grupo'
+    let url = 'http://201.6.243.44:3878/api/all'
     fetch(url,
       {
         method: "get",
@@ -85,59 +70,34 @@ function getAllGroups() {
         }
       })
       .then(res => res.json())
-      .then(grupos => {
-        console.log('HERE');
+      .then(all => {
+        console.log(all);
+        localStorage.setItem('Grupos', JSON.stringify(all.grupos));
+        console.log('HERE')
+        localStorage.setItem('Reunioes', JSON.stringify(all.reunioes));
 
-        getAllReunioes();
-
-        gurpos = grupos.map(grupo => {
-          if(grupo.imagem){
-          grupo.imagem = bufferToBase64(grupo.imagem.data)}
-        })
-
-        localStorage.setItem('Grupos', JSON.stringify(grupos));
-        app.router.navigate('/menu/', {reload:true, force:true, ignoreCache:true});
-        localStorage.primeiraVez = true
+        if (refresh) {
+          app.ptr.done();
+        } else {
+          app.router.navigate('/menu/', { reload: true, force: true, ignoreCache: true });
+          localStorage.primeiraVez = true
+        }
+      })
+      .catch(err => {
+        console.log('Request failure: ', err);
         app.ptr.done();
-      })
-      .catch(err => {
-        let grupos = JSON.parse(localStorage.getItem('Grupos'));
-        if (grupos) {
-          app.router.navigate('/menu/');
-        }
-        console.log('Request failure: ', err);
+        console.log(app)
+        app.dialog.alert("Não foi possível Atualizar, tente conectar-se a internet.", "Open Groups", function(){
+          console.log(window);
+          // window.navigator.app.exitApp();
+        });
       })
   } catch (err) {
     console.log('err: ' + err);
-
+    app.ptr.done();
+    app.dialog.alert("Houve algum erro no sistema, por favor reinicie a aplicação.", "Open Groups");
   }
 }
-
-//Get all Reunioes
-function getAllReunioes() {
-  try {
-    let url = 'http://localhost:3000/api/reuniao'
-    fetch(url,
-      {
-        method: "get",
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(res => res.json())
-      .then(reunioes => {
-        console.log('Reuniao HERE');
-        localStorage.setItem('Reunioes', JSON.stringify(reunioes));
-      })
-      .catch(err => {
-        console.log('Request failure: ', err);
-      })
-  } catch (err) {
-    console.log('err: ' + err);
-
-  }
-}
-
 
 
 function bufferToBase64(buf) {

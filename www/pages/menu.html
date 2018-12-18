@@ -46,7 +46,6 @@
   }
 </style>
 <script>
-  $('.ptr-preloader').hide()
   return {
     data: function () {
       var grupos = JSON.parse(localStorage.getItem('Grupos')) || null
@@ -54,11 +53,13 @@
     },
     on: {
       pageInit: function () {
+        $('.ptr-preloader').hide()
         // JS.init()
         // Pull to refresh content
         var ptrContent = $('.ptr-content');
 
         ptrContent.on('ptr:refresh', function (e) {
+          $('.ptr-preloader').show()
           JS.recarregar();
           //app.ptr.done();
         });

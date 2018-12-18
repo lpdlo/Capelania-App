@@ -3,4 +3,5 @@ hooks/
 node_modules/
 platforms
 plugins/
-typingsg/
+typings/
+jsconfig.json

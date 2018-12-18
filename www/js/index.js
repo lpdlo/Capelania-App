@@ -71,16 +71,16 @@ function getAll(refresh = false) {
       })
       .then(res => res.json())
       .then(all => {
-        console.log('HERE')
         console.log(all);
         
         localStorage.setItem('Grupos', JSON.stringify(all.grupos));
         localStorage.setItem('Reunioes', JSON.stringify(all.reunioes));
-
+        
         if (refresh) {
+          app.router.navigate('/menu/', { reloadCurrent: true, force: true, ignoreCache: true });
           app.ptr.done();
         } else {
-          app.router.navigate('/menu/', { reload: true, force: true, ignoreCache: true });
+          app.router.navigate('/menu/');
           localStorage.primeiraVez = true
         }
       })

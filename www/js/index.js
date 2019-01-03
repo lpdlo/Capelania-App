@@ -77,7 +77,7 @@ function getAll(refresh = false) {
         localStorage.setItem('Reunioes', JSON.stringify(all.reunioes));
         
         if (refresh) {
-          app.router.navigate('/menu/', { reloadCurrent: true, force: true, ignoreCache: true });
+          app.router.navigate('/menu-grupo/', { reloadCurrent: true, force: true, ignoreCache: true });
           app.ptr.done();
         } else {
           app.router.navigate('/menu/');

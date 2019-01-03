@@ -23,8 +23,14 @@ var app = new Framework7({
       path: '/menu/',
       componentUrl: './pages/menu.html'
     }, {
+      path: '/menu-grupo/',
+      componentUrl: './pages/menu-grupo.html'
+    }, {
       path: '/grupo/',
       componentUrl: './pages/grupo.html'
+    }, {
+      path: '/capelania/',
+      componentUrl: './pages/capelania.html'
     }
   ]
 });

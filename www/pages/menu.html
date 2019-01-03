@@ -3,33 +3,81 @@
 
 
     <div class="background-menu navbar" style="opacity: 1;height: 9vh;">
-      <div class="navbar-inner sliding logo-menu" style="position: flex;">
+      <!-- <div class="navbar-inner sliding logo-menu" style="position: flex;"> -->
+      <div class="title">
+        <p>Open Groups</p>
       </div>
     </div>
-    <div class="page-content ptr-content hide-navbar-on-scroll">
-      <div class="ptr-preloader">
-        <div class="preloader"></div>
-        <div class="ptr-arrow"></div>
+    <div class="page-content ptr-content">
+
+      
+
+      <div class="card demo-card-header-pic" style="margin-top:11vh;">
+        <div style="background-image:url('../img/INDEX/capela.png');border-radius: 10px 10px 0 0; height: 35vh;" class="card-header align-items-flex-end"></div>
+        <div class="card-content card-content-padding flex-center">
+
+          <img src="../img/INDEX/capelania.png" alt="" width="200px">
+        </div>
       </div>
       <br>
+      <div class="card demo-card-header-pic">
+        <div class="card-content card-content-padding cardMenu">
+          <div class="if">
+            <p class="descricaoMenu"></p>
+            <p class="dataMenu">Aqui Você Encontra Paz</p>
+            <p class="dataMenu">Aqui Você Encontra Amor</p>
+            <p class="dataMenu">Aqui Você Encontra Esperança</p>
+          </div>
+        </div>
+      </div>
+
       <br>
-      <br>
+      <div style="display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;">
+
+        <a href="/capelania/">
+          <div class="card demo-card-header-pic" style="width: 45vw">
+            <div class="card-content card-content-padding cardMenu">
+              <div class="if">
+                <p class="descricaoMenu"></p>
+                <p class="dataMenu">CAPELANIA</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="/menu-grupo/">
+          <div class="card demo-card-header-pic" style="width: 45vw">
+            <div class="card-content card-content-padding cardMenu">
+              <div class="if">
+                <p class="descricaoMenu"></p>
+                <p class="dataMenu">GRUPOS</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
 
       <!--Grupo-->
-      {{#if grupos}} {{#each grupos}} {{#if imagem}}
+      <!-- {{#if grupos}} {{#each grupos}} {{#if imagem}}
       <a href="/grupo/?id={{_id}}" style="padding: 0 10px 0 10px;">
         <div class="card demo-card-header-pic">
           <div style="background-image:url(data:image/png;base64,{{imagem}})" class="card-header align-items-flex-end"></div>
           <div class="card-content card-content-padding cardMenu">
             <div class="if">
               <p class="descricaoMenu">{{sigla}}</p>
-              <!-- <p class="dataMenu">Segunda-feira ás 11:15h na Capela<br> Quinta-feira ás 18hs no Bosque da Arquitetura</p>  -->
               <p class="dataMenu">{{breveDescricao}}</p>
             </div>
           </div>
         </div>
       </a>
-      {{/if}} {{/each}} {{/if}}
+      {{/if}} {{/each}} {{/if}} -->
+
+
+
     </div>
   </div>
 </template>

@@ -1,0 +1,138 @@
+<template>
+	<div class="page no-swipeback">
+		<div class="navbar navGrupo ">
+			<div class="navbar-inner sliding" id="imageMenu">
+				<div class="left">
+					<a href="#" class="link back">
+						<i class="icon icon-back color-white"></i>
+					</a>
+				</div>
+				<div class="title">
+					<p>{{nome}}</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="page-content paddingBottonGrupo hide-navbar-on-scroll">
+			<div class="card demo-card-header-pic" id="cardMenu">
+
+				<div style="background-image:url('../img/INDEX/capela.png')" class="card-header align-items-flex-end" id="headCardMenu"></div>
+				<div class="card-content card-content-padding">
+					<p class="descricaoMenu">{{nome}}</p>
+					<p class="grupoMenu">{{sigla}}</p>
+					<br>
+					<p class="grupoMenu">{{sobre}}</p>
+				</div>
+
+				<div class="card-content card-content-padding cardMenu ">
+					<div class="if">
+						<div class="card demo-card-header-pic">
+							<div class="card-content card-content-padding cardMenu">
+								<div class="if">
+									<p class="descricaoMenu">Horários de Atendimento</p>
+									<!-- <p class="grupoMenu">Breve descrição</p> -->
+
+									{{#each reunioes}}
+									<div class="grupoDataLocalizacao">
+										<div>
+											<img src="./img/grups/calendario.png" height="46px" alt="">
+										</div>
+										<div>
+											<p class="roboto">{{dia}} ás {{horario}} {{local}}
+											</p>
+										</div>
+									</div>
+									{{/each}}
+
+
+								</div>
+							</div>
+						</div>
+						<div class="card demo-card-header-pic">
+							<div class="card-content card-content-padding cardMenu">
+								<div class="if">
+									<p class="descricaoMenu">Organizadores</p>
+									<!-- <p class="grupoMenu">Organizadores</p> -->
+									{{#if organizador1}}
+									<div class="grupoDataLocalizacao">
+										<div>
+											<img src="./img/grups/pessoal.png" height="46px" alt="">
+										</div>
+										<div>
+											<p class="roboto"><b>{{organizador1}}</b> <br> {{contatoOrganizador1}}</p>
+										</div>
+									</div>
+									{{/if}} {{#if organizador2}}
+									<div class="grupoDataLocalizacao">
+										<div>
+											<img src="./img/grups/pessoal.png" height="46px" alt="">
+										</div>
+										<div>
+											<p class="roboto"><b>{{organizador2}}</b> <br> {{contatoOrganizador2}}</p>
+										</div>
+									</div>
+									{{/if}} {{#if organizador3}}
+									<div class="grupoDataLocalizacao">
+										<div>
+											<img src="./img/grups/pessoal.png" height="46px" alt="">
+										</div>
+										<div>
+											<p class="roboto"><b>{{organizador3}}</b> <br> {{contatoOrganizador3}}</p>
+										</div>
+									</div>
+									{{/if}}
+
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+					</div>
+
+					<div class="grupoMenu">
+						<p class="grupoMenu">Contato</p>
+						{{#if whatsapp}}
+						<a href="#" onclick="window.open('{{whatsapp}}', '_system');">
+							<img src="./img/grups/whatsapp.svg" height="41px" alt="whatsapp">
+						</a>
+						{{/if}} {{#if facebook}}
+						<a href="#" onclick="window.open('{{facebook}}', '_system');">
+							<img src="./img/grups/facebook.svg" height="41px" alt="facebook"></a>
+						{{/if}} {{#if instagram}}
+						<a href="#" onclick="window.open('{{instagram}}', '_system');">
+							<img src="./img/grups/instagram.svg" height="33px" style="margin-left:6px;margin-bottom: 0.2pc;" alt="instagram">
+						</a>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	return {
+		data: function () {
+			return {
+				nome: 'Capelania Mackenzie',
+				sigla: 'Você Inteiro',
+				organizador1: 'Marcelo Coelho',
+				organizador2: 'Jonatas Abdias',
+				contatoOrganizador1: '+55 11 98335-4308',
+				contatoOrganizador2: '+55 11 94281-4582',
+				reunioes: [{ dia: 'Segunda-Feira', horario: 'em qualquer horário', local: 'na Capela' }],
+				whatsapp: 'https://api.whatsapp.com/send?phone=5511983354308',
+				breveDescricao: 'O grupo Fala Sobre',
+				sobre: 'A instituição oficial da Capelania se deu em Janeiro de 1975, exercida pelo Rev. Odayr Olivetti. \
+								 A Capelania Mackenzie, é um serviço de apoio e assistência espiritual, centrado nas verdades bíblicas,\
+								  comprometida com a formação integral do ser humano no resgate dos valores construtivos, \
+								  transmitindo palavra de orientação e encorajamento às pessoas em momentos especiais ou de crise. '
+
+			}
+		}
+	}
+</script>

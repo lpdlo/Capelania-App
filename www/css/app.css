@@ -519,3 +519,12 @@
 .page-content {
   background-color: rgba(132, 84, 15, 0.09019607843137255);
 }
+
+.flex-center{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
